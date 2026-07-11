@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "DropDownView",
     platforms: [
-        .iOS(.v14),    // 最低支持系统
+        .iOS(.v13),    // 最低支持系统
         .macOS(.v13)
     ],
     products: [

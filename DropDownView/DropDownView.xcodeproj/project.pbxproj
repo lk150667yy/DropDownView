@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F2F726A3000A13D004ABA6F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2F72693000A13D004ABA6F /* SnapKit */; };
+		4F7DFD333001E8C60026B94C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F7DFD323001E8C60026B94C /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F2F726A3000A13D004ABA6F /* SnapKit in Frameworks */,
+				4F7DFD333001E8C60026B94C /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 			);
 			name = DropDownView;
 			packageProductDependencies = (
-				4F2F72693000A13D004ABA6F /* SnapKit */,
+				4F7DFD323001E8C60026B94C /* SnapKit */,
 			);
 			productName = DropDownView;
 			productReference = 4F2F7256300099B1004ABA6F /* DropDownView.framework */;
@@ -112,7 +112,7 @@
 			mainGroup = 4F2F724C300099B1004ABA6F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				4F2F72683000A13D004ABA6F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4F7DFD313001E8C60026B94C /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4F2F7257300099B1004ABA6F /* Products */;
@@ -283,7 +283,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +319,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,20 +366,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4F2F72683000A13D004ABA6F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		4F7DFD313001E8C60026B94C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
+				kind = exactVersion;
+				version = 5.7.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F2F72693000A13D004ABA6F /* SnapKit */ = {
+		4F7DFD323001E8C60026B94C /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4F2F72683000A13D004ABA6F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 4F7DFD313001E8C60026B94C /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
