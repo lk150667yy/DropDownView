@@ -6,11 +6,12 @@
 //
 
 import UIKit
-internal import SnapKit
-fileprivate let AppW : CGFloat = UIScreen.main.bounds.size.width
-fileprivate let AppH : CGFloat = UIScreen.main.bounds.size.height
+//import SnapKit
 
-class DropDownView: UIView,UITableViewDelegate,UITableViewDataSource {
+
+public class DropDownView: UIView,UITableViewDelegate,UITableViewDataSource {
+    fileprivate let AppW : CGFloat = UIScreen.main.bounds.size.width
+    fileprivate let AppH : CGFloat = UIScreen.main.bounds.size.height
     typealias DropDownViewBlock = (Int,String) -> ()
     var selectionAction : DropDownViewBlock?
     @IBOutlet weak var tWidth: NSLayoutConstraint!
@@ -58,6 +59,7 @@ class DropDownView: UIView,UITableViewDelegate,UITableViewDataSource {
         super.init(frame: CGRect(x: 0, y: 0, width: AppW, height: AppH))
         contentView = Bundle.main.loadNibNamed("DropDownView", owner: self)?.first as? UIView
         self.addSubview(contentView!)
+        contentView?.frame = CGRect(x: 0, y: 0, width: AppW, height: AppH)
         self.backgroundColor = UIColor.clear
         contentView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
         tableView.layer.cornerRadius = ddCornerRadius
@@ -83,7 +85,7 @@ class DropDownView: UIView,UITableViewDelegate,UITableViewDataSource {
         tableView.layer.borderWidth = borderWidth
     }
 
-    func show() {
+    public func show() {
         let frame = anchorView.frame
         let point = anchorView.convert(CGPoint(x: 0, y: 0), to: nil)
 
@@ -127,11 +129,11 @@ class DropDownView: UIView,UITableViewDelegate,UITableViewDataSource {
         UIApplication.shared.windows.first?.addSubview(self)
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = DownSelectedTableViewCell.tableViewCell(
             tableView,
             type: DownSelectedTableViewCell.self
@@ -146,15 +148,15 @@ class DropDownView: UIView,UITableViewDelegate,UITableViewDataSource {
         }
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView?.snp.makeConstraints { make in
-            make.left.right.bottom.top.equalToSuperview().offset(0)
-        }
-    }
+//    public override func layoutSubviews() {
+//        super.layoutSubviews()
+//        contentView?.snp.makeConstraints { make in
+//            make.left.right.bottom.top.equalToSuperview().offset(0)
+//        }
+//    }
 
 }
